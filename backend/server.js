@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config({ path: './.config.env' });
+dotenv.config({ path: './.env' });
 
 import express from 'express';
 import cors from 'cors';
@@ -59,5 +59,5 @@ app.use(
 );
 
 // Start Server
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
